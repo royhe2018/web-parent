@@ -29,10 +29,10 @@ public class JsonUtil {
 		return result;
 	}
 	
-	public static Object convertStrToMap(String src) {
-		Map<String, Object> result =null;
+	public static Map<String,String> convertStrToMap(String src) {
+		Map<String, String> result =null;
 		try {
-			result = om.readValue(src, new TypeReference<Map<String,Object>>() {
+			result = om.readValue(src, new TypeReference<Map<String,String>>() {
 	        });
 		}catch(Exception e) {
 			logger.error("str covert to map exception", e);
